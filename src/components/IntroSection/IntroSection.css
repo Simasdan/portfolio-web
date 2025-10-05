@@ -1,0 +1,110 @@
+.intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    padding: 0px 120px;
+}
+
+.intro-section p {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.intro-section .gradient-wrapper {
+    width: 300px;
+    height: 300px;
+    /* background-image: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
+    border: 8px solid transparent; 
+    border-radius: 50%;
+    background-size: cover;
+    /* animation: spin 2s linear infinite; */
+    margin-bottom: 50px;
+}
+
+.intro-section .intro-section-img-wrapper {
+    width: 100%;
+    height: 100%;
+    border: 1px transparent;
+    border-radius: 50%;
+    background-image: url(./profilio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* animation: spinReverse 2s linear infinite; */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinReverse {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@media only screen and (max-width: 875px) {
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .intro-section {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 875px) {
+
+    .intro-section {
+        gap: 0;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    .intro-section .gradient-wrapper {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+
+    .intro-section .gradient-wrapper {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .intro-section {
+        padding: 20px;
+    }
+
+    .intro-section p {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .intro-section p {
+        font-size: 14px;
+    }
+}

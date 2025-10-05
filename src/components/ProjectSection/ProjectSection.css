@@ -1,0 +1,14 @@
+.project-section {
+    padding: 140px 20px;
+}
+
+.project-section .project-section-title,
+.project-section .project-section-subtitle 
+    {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.project-section .project-section-subtitle {
+    font-size: 20px;
+}
