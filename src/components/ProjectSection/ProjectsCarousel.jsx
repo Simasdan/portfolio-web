@@ -78,7 +78,7 @@ const ProjectsCarousel = () => {
                     title={'Woof.lt'}
                     description={'This is an online dog grooming platform for Lithuania based dog groomers and owners.'}
                     techStack={'React, TypeScript and SCSS'}
-                    livePreviewLink={'https://woof.lt/'}
+                    livePreviewLink={'https://simasdan.github.io/woof.lt/'}
                 />
                 <ProjectCard
                     imageClass={'fifth'}
