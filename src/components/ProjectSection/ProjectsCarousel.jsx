@@ -66,19 +66,21 @@ const ProjectsCarousel = () => {
                     techStack={'React, TypeScript and SCSS'}
                     livePreviewLink={'https://tangerine-brigadeiros-d5c2da.netlify.app/'}
                     codeLink={'https://github.com/Simasdan/Portfolio-projects/tree/main/5-lunch-app'} />
-                {/* <ProjectCard
+                <ProjectCard
                     imageClass={'seventh'}
                     title={'Universitetas.lt'}
-                    description={'This is an online platform providing diverse information on business creation, offering assistance to both beginners and seasoned entrepreneurs! I am part of this project as a front-end developer.'}
-                    techStack={'React, TypeScript and SCSS'}
-                    livePreviewLink={'https://www.universitetas.lt'}
-                    /> */}
+                    description={'This is a Full-Stack project of an online platform providing diverse information on business creation, offering assistance to both beginners and seasoned entrepreneurs!'}
+                    techStack={'React, TypeScript, SCSS, ASP.NET Core WEB API and Microsoft Azure Hosting'}
+                    livePreviewLink={'https://simasdan.github.io/universitetaslt/'}
+                    codeLink={'https://github.com/Simasdan/universitetaslt'}
+                    />
                 <ProjectCard
                     imageClass={'eight'}
                     title={'Woof.lt'}
-                    description={'This is an online dog grooming platform for Lithuania based dog groomers and owners.'}
+                    description={'This is a landing page of an online dog grooming platform for Lithuania based dog groomers and owners.'}
                     techStack={'React, TypeScript and SCSS'}
                     livePreviewLink={'https://simasdan.github.io/woof.lt/'}
+                    codeLink={'https://github.com/Simasdan/woof.lt'}
                 />
                 <ProjectCard
                     imageClass={'fifth'}

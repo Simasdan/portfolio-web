@@ -17,7 +17,8 @@
     "react-icons": "^5.0.1",
     "react-multi-carousel": "^2.8.5",
     "react-router-dom": "^6.22.2",
-    "react-router-hash-link": "^2.4.3"
+    "react-router-hash-link": "^2.4.3",
+    "tech-stack-icons": "^3.7.1"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",

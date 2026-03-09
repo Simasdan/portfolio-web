@@ -35,7 +35,7 @@ window.addEventListener('scroll', changeBackground)
         </button>
         <ul className={`navigation-bar-content ${props.isOpen ? 'is-open' : ''}`}>
           <li><button onClick={() => navLinkHandler(refsFromParent.aboutSectionRef)}>Home</button></li>
-          <li><button onClick={() => navLinkHandler(refsFromParent.introSectionRef)}>About</button></li>
+          {/* <li><button onClick={() => navLinkHandler(refsFromParent.introSectionRef)}>About</button></li> */}
           <li><button onClick={() => navLinkHandler(refsFromParent.secondSectionRef)}>Tech Stack</button></li>
           <li><button onClick={() => navLinkHandler(refsFromParent.certificatesRef)}>Certificates</button></li>
           <li><button onClick={() => navLinkHandler(refsFromParent.projectSectionRef)}>Projects</button></li>

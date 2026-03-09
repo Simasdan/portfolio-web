@@ -8,6 +8,10 @@
     padding: 20px;
     height: calc(100vh + 90px);
 
+    @media only screen and (max-width: 1050px) {
+        height: unset;
+        padding-top: 120px;
+    }
 
     h2 {
         font-style: normal;

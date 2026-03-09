@@ -5,7 +5,7 @@
     justify-content: center;
     gap: 20px;
     padding: 50px 20px;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .second-section p {
@@ -19,6 +19,7 @@
     justify-content: center;
     gap: 20px;
     padding-top: 20px;
+    max-width: 600px;
 }
 
 @media only screen and (max-width: 500px) {
@@ -38,4 +39,14 @@
     }
 }
 
+.tech-stack-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.tech-icon {
+    width: 25px;
+}
 

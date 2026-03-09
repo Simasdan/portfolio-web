@@ -1,32 +1,65 @@
 import './SecondSection.css';
-import HtmlLogo from '../../assets/html.svg?react';
-import CssLogo from '../../assets/css.svg?react';
-import JavaScriptLogo from '../../assets/javascript.svg?react';
-import TypeScriptLogo from '../../assets/typescript.svg?react';
-import ReactLogo from '../../assets/react.svg?react';
-import BootstrapLogo from '../../assets/bootstrap.svg?react';
-import SassLogo from '../../assets/sass.svg?react';
-import GitLogo from '../../assets/git.svg?react';
-import VSCodeLogo from '../../assets/vscode.svg?react';
-import GithubLogo from '../../assets/github.svg?react';
+import StackIcon from "tech-stack-icons";
 
 const SecondSection = () => {
     return (
         <div className='second-section'>
             <h2 className='second-section-title'>My Tech Stack</h2>
             <p className='second-section-subtitle'>Technologies I have learned and worked with so far</p>
-            <div className="second-section-tech-stack-wrapper">
-                <HtmlLogo/>
-                <CssLogo/>
-                <JavaScriptLogo/>
-                <TypeScriptLogo/>
-                <ReactLogo/>
-                <BootstrapLogo/>
-                <SassLogo/>
-                <GitLogo/>
-                <VSCodeLogo/>
-                <GithubLogo/>
-            </div>
+            <ul className="second-section-tech-stack-wrapper">
+                <li className='tech-stack-line'>
+                    <StackIcon name="typescript" className="tech-icon" />
+                    TypeScript
+                </li>
+                <li className='tech-stack-line'>
+                    <StackIcon name="react" className="tech-icon" />
+                    React.js
+                </li>
+                <li className='tech-stack-line'>
+                    <StackIcon name="c#" className="tech-icon" />
+                    C#
+                </li>
+                <li className='tech-stack-line'>
+                    <StackIcon name="net" className="tech-icon" />
+                    .NET
+                </li>
+                <li className='tech-stack-line'>
+                    <StackIcon name="html5" className="tech-icon" />
+                    HTML
+                </li>
+                <li className='tech-stack-line'>
+                    <StackIcon name="css3" className="tech-icon" />
+                    CSS
+                </li>
+                <li className='tech-stack-line'>
+                    <StackIcon name="sass" className="tech-icon" />
+                    SCSS
+                </li>
+                <li className='tech-stack-line'>
+                    <StackIcon name="js" className="tech-icon" />
+                    JavaScript
+                </li>
+                <li className='tech-stack-line'>
+                    <StackIcon name="shadcnui" className="tech-icon" />
+                    Shadcn UI
+                </li>
+                <li className='tech-stack-line'>
+                    <StackIcon name="git" className="tech-icon" />
+                    GIT
+                </li>
+                <li className='tech-stack-line'>
+                    <StackIcon name="github" className="tech-icon" />
+                    GitHub
+                </li>
+                <li className='tech-stack-line'>
+                    <StackIcon name="tailwindcss" className="tech-icon" />
+                    Tailwind CSS
+                </li>
+                <li className='tech-stack-line'>
+                    <StackIcon name="bootstrap5" className="tech-icon" />
+                    Bootstrap
+                </li>
+            </ul>
         </div>
     )
 }

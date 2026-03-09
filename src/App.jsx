@@ -15,7 +15,6 @@ function App() {
 
   const allRefs = {
     aboutSectionRef: useRef(),
-    introSectionRef: useRef(),
     secondSectionRef: useRef(),
     certificatesRef: useRef(),
     projectSectionRef: useRef(),
@@ -39,8 +38,7 @@ function App() {
           isOpen={isOpen}
           setIsOpen={setIsOpen} />
         <div className='container'>
-          <div ref={allRefs.aboutSectionRef}><AboutSection /></div>
-          <div ref={allRefs.introSectionRef}><IntroSection /></div>
+          <div className='aboutWrapper' ref={allRefs.aboutSectionRef}><AboutSection /><IntroSection /></div>
           <div ref={allRefs.secondSectionRef}><SecondSection /></div>
           <div ref={allRefs.certificatesRef}><Certificates /></div>
           <div ref={allRefs.projectSectionRef}><ProjectSection /></div>
