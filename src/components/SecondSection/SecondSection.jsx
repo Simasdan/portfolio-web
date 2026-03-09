@@ -59,6 +59,22 @@ const SecondSection = () => {
                     <StackIcon name="bootstrap5" className="tech-icon" />
                     Bootstrap
                 </li>
+                <li className='tech-stack-line'>
+                    <StackIcon name="mongodb" className="tech-icon" />
+                    MongoDB
+                </li>
+                <li className='tech-stack-line'>
+                    <StackIcon name="nodejs" className="tech-icon" />
+                    Node.js
+                </li>
+                <li className='tech-stack-line'>
+                    <StackIcon name="expressjs" className="tech-icon" />
+                    Express.js
+                </li>
+                <li className='tech-stack-line'>
+                    <StackIcon name="azure" className="tech-icon" />
+                    Azure
+                </li>
             </ul>
         </div>
     )
