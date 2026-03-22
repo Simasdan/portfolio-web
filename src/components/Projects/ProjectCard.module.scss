@@ -1,0 +1,194 @@
+@use '../../styles/tools' as t;
+
+// ── Flip card (desktop) ───────────────────────────────────────────────
+.flipWrap {
+  height: 240px;
+  perspective: 1000px;
+  cursor: pointer;
+
+  &:hover .front {
+    border-color: t.$border-strong;
+  }
+
+  &:hover .imgLine {
+    width: 100%;
+  }
+
+  &:hover .flipHint {
+    color: t.$text-muted;
+  }
+
+  &:hover .arrow {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  &:hover .flipInner {
+    transform: rotateY(180deg);
+  }
+}
+
+.flipInner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: t.$border-radius-md;
+  overflow: hidden;
+}
+
+// ── Shared front face (used by both flip and mobile card) ─────────────
+.front {
+  background: t.$bg-secondary;
+  border: 0.5px solid t.$border-subtle;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.25s;
+
+  // Mobile flat card styles (no flip wrapper)
+  .card & {
+    position: static;
+    backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+    height: 100%;
+    transform: none;
+  }
+}
+
+.imgArea {
+  flex: 1;
+  @include t.flex-center;
+  background: t.$bg-tertiary;
+  border-bottom: 0.5px solid t.$border-subtle;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.2s;
+  min-height: 80px;
+}
+
+.num {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  font-size: 0.625rem;
+  color: t.$text-faint;
+  font-weight: 500;
+}
+
+.imgLabel {
+  font-size: 0.625rem;
+  color: #252525;
+}
+
+.flipHint {
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  font-size: 0.625rem;
+  color: t.$text-faint;
+  transition: color 0.2s;
+}
+
+.imgLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: t.$accent;
+  transition: width 0.3s;
+}
+
+.body {
+  padding: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.bodyHeader {
+  @include t.flex-between;
+}
+
+.name {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: t.$text-primary;
+}
+
+.arrow {
+  font-size: 0.875rem;
+  color: t.$accent;
+  opacity: 0;
+  transform: translate(-4px, 4px);
+  transition: opacity 0.2s, transform 0.2s;
+
+  // Always visible on mobile flat card
+  .card & {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.stack {
+  font-size: 0.625rem;
+  color: t.$text-faint;
+}
+
+// ── Back face ─────────────────────────────────────────────────────────
+.back {
+  background: t.$bg-tertiary;
+  border: 0.5px solid t.$accent;
+  transform: rotateY(180deg);
+  @include t.flex(column, center, center, 0.5rem);
+}
+
+.backIcon {
+  font-size: 1.375rem;
+  color: t.$accent;
+}
+
+.backLabel {
+  font-size: 0.75rem;
+  color: t.$text-muted;
+}
+
+// ── Mobile flat card ──────────────────────────────────────────────────
+.card {
+  cursor: pointer;
+  height: 180px;
+  border-radius: t.$border-radius-md;
+  overflow: hidden;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-2px);
+
+    .front {
+      border-color: t.$accent;
+    }
+
+    .imgLine {
+      width: 100%;
+    }
+  }
+}
+
+.cardImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}

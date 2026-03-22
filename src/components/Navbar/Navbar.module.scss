@@ -1,0 +1,180 @@
+@use '../../styles/tools' as t;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: background 0.3s, border-color 0.3s;
+  border-bottom: 0.5px solid transparent;
+
+  &.scrolled {
+  background: rgba(26, 32, 24, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom-color: t.$border-subtle;
+
+  .link {
+    color: rgba(246, 243, 239, 0.6);
+
+    &:hover {
+      color: t.$accent;
+    }
+  }
+
+  .brand {
+    color: rgba(246, 243, 239, 0.9);
+  }
+}
+}
+
+.inner {
+  @include t.flex-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.125rem t.$section-padding-x;
+
+  @include t.lg {
+    padding: 1rem t.$section-padding-x-sm;
+  }
+}
+
+.brand {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: t.$text-primary;
+}
+
+.links {
+  @include t.flex(row, center, center, 1.75rem);
+
+  @include t.lg {
+    display: none;
+  }
+}
+
+.link {
+  font-size: 0.75rem;
+  color: t.$text-muted;
+  letter-spacing: 0.06em;
+  transition: color 0.2s;
+  position: relative;
+  padding-bottom: 2px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: t.$accent;
+    transition: width 0.25s;
+  }
+
+  &:hover {
+    color: t.$accent;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.cta {
+  font-size: 0.75rem;
+  color: t.$accent-dark;
+  background: t.$accent;
+  padding: 0.4rem 1rem;
+  border-radius: t.$border-radius-pill;
+  letter-spacing: 0.04em;
+  transition: transform 0.15s, opacity 0.15s;
+  font-weight: 500;
+
+  &:hover {
+    transform: scale(1.04);
+    opacity: 0.9;
+  }
+
+  @include t.lg {
+    display: none;
+  }
+}
+
+.burger {
+  @include t.flex(column, center, center, 5px);
+  width: 2.25rem;
+  height: 2.25rem;
+  display: none;
+
+  @include t.lg {
+    @include t.flex(column, center, center, 5px);
+  }
+
+  span {
+    display: block;
+    width: 1.25rem;
+    height: 1.5px;
+    background: t.$text-primary;
+    transition: transform 0.25s, opacity 0.25s;
+    transform-origin: center;
+  }
+
+  &.burgerOpen {
+    span:nth-child(1) {
+      transform: translateY(6.5px) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: translateY(-6.5px) rotate(-45deg);
+    }
+  }
+}
+
+.mobileMenu {
+  @include t.flex(column, flex-start, stretch, 0);
+  background: rgba(10, 10, 10, 0.97);
+  backdrop-filter: blur(12px);
+  border-top: 0.5px solid t.$border-subtle;
+  padding: 0.75rem t.$section-padding-x-sm 1.25rem;
+  display: none;
+
+  @include t.lg {
+    @include t.flex(column, flex-start, stretch, 0);
+  }
+}
+
+.mobileLink {
+  font-size: 0.9375rem;
+  color: t.$text-muted;
+  padding: 0.875rem 0;
+  border-bottom: 0.5px solid t.$border-subtle;
+  text-align: left;
+  transition: color 0.2s;
+
+  &:hover {
+    color: t.$text-primary;
+  }
+}
+
+.mobileCta {
+  margin-top: 1rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: t.$accent-dark;
+  background: t.$accent;
+  padding: 0.75rem;
+  border-radius: t.$border-radius-pill;
+  text-align: center;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

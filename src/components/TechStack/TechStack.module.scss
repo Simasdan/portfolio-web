@@ -1,0 +1,77 @@
+@use '../../styles/tools' as t;
+
+.section {
+  padding: t.$spacing-xl t.$section-padding-x;
+  border-bottom: 0.5px solid t.$border-subtle;
+
+  @include t.lg {
+    padding: t.$spacing-xl t.$section-padding-x-sm;
+  }
+}
+
+.header {
+  @include t.flex-between;
+  margin-bottom: 1.75rem;
+}
+
+.title {
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  color: t.$text-faint;
+}
+
+.count {
+  font-size: 0.6875rem;
+  color: t.$border-medium;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: #d4cfc6;
+  border: 0.5px solid #d4cfc6;
+  border-radius: t.$border-radius-md;
+  overflow: hidden;
+
+  @include t.xl {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include t.lg {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include t.md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.item {
+  @include t.flex(column, flex-start, flex-start, 0.3125rem);
+  background: t.$bg-primary;
+  padding: 0.875rem 1rem;
+  transition: background 0.2s, transform 0.15s;
+  cursor: default;
+
+  &:hover {
+    background: t.$bg-tertiary;
+    transform: translateY(-1px);
+
+    .name {
+      color: t.$accent;
+    }
+  }
+}
+
+.name {
+  font-size: 0.75rem;
+  color: #c0bdb8;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.category {
+  font-size: 0.625rem;
+  color: t.$border-strong;
+}

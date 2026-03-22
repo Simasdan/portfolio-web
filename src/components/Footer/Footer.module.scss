@@ -1,0 +1,25 @@
+@use '../../styles/tools' as t;
+
+.footer {
+  @include t.flex-between;
+  padding: 1rem t.$section-padding-x;
+
+  @include t.lg {
+    padding: 1rem t.$section-padding-x-sm;
+  }
+}
+
+.copy {
+  font-size: 0.6875rem;
+  color: t.$border-medium;
+}
+
+.backToTop {
+  font-size: 0.6875rem;
+  color: t.$text-faint;
+  transition: color 0.2s;
+
+  &:hover {
+    color: t.$accent;
+  }
+}

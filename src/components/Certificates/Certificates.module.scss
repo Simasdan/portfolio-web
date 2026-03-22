@@ -1,0 +1,147 @@
+@use '../../styles/tools' as t;
+
+.section {
+  padding: t.$spacing-xl t.$section-padding-x;
+  border-bottom: 0.5px solid t.$border-subtle;
+
+  @include t.lg {
+    padding: t.$spacing-xl t.$section-padding-x-sm;
+  }
+}
+
+.header {
+  @include t.flex-between;
+  margin-bottom: 1.75rem;
+}
+
+.title {
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  color: t.$text-faint;
+}
+
+.count {
+  font-size: 0.6875rem;
+  color: t.$border-medium;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.875rem;
+
+  @include t.md {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: t.$bg-secondary;
+  border: 0.5px solid t.$border-subtle;
+  border-radius: t.$border-radius-md;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.25s, transform 0.2s;
+
+  &:hover {
+    border-color: t.$accent;
+    transform: translateY(-2px);
+
+    .overlay {
+      opacity: 1;
+    }
+  }
+}
+
+.preview {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: t.$bg-tertiary;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+
+  .card:hover & {
+    transform: scale(1.02);
+  }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.6);
+  @include t.flex-center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.overlayText {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: t.$accent;
+  letter-spacing: 0.08em;
+  border: 0.5px solid t.$accent;
+  padding: 0.4rem 1.25rem;
+  border-radius: t.$border-radius-pill;
+}
+
+.info {
+  @include t.flex(column, flex-start, flex-start, 0.25rem);
+  padding: 0.875rem 1rem;
+  border-top: 0.5px solid t.$border-subtle;
+}
+
+.certTitle {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: t.$text-primary;
+}
+
+.issuer {
+  font-size: 0.6875rem;
+  color: t.$text-muted;
+}
+
+// Lightbox
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  @include t.flex-center;
+  z-index: 200;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.lightboxClose {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-size: 1.25rem;
+  color: t.$text-muted;
+  width: 2.5rem;
+  height: 2.5rem;
+  @include t.flex-center;
+  border-radius: 50%;
+  border: 0.5px solid t.$border-subtle;
+  transition: color 0.2s, border-color 0.2s;
+  z-index: 201;
+
+  &:hover {
+    color: t.$text-primary;
+    border-color: t.$text-primary;
+  }
+}
+
+.lightboxImg {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: t.$border-radius-md;
+  cursor: default;
+}

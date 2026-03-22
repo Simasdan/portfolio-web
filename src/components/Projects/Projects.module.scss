@@ -1,0 +1,45 @@
+@use '../../styles/tools' as t;
+
+.section {
+  padding: t.$spacing-xl t.$section-padding-x;
+  border-bottom: 0.5px solid t.$border-subtle;
+
+  @include t.lg {
+    padding: t.$spacing-xl t.$section-padding-x-sm;
+  }
+}
+
+.header {
+  @include t.flex-between;
+  margin-bottom: 1.75rem;
+}
+
+.title {
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  color: t.$text-faint;
+}
+
+.hint {
+  font-size: 0.6875rem;
+  color: t.$border-medium;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.875rem;
+
+  @include t.lg {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include t.md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include t.sm {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.625rem;
+  }
+}

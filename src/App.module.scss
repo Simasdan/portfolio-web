@@ -1,0 +1,9 @@
+@use './styles/tools' as t;
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  border-left: 0.5px solid t.$border-subtle;
+  border-right: 0.5px solid t.$border-subtle;
+  min-height: 100vh;
+}

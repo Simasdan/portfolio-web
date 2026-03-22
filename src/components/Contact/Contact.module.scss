@@ -1,0 +1,107 @@
+@use '../../styles/tools' as t;
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 0.5px solid t.$border-subtle;
+
+  @include t.lg {
+    grid-template-columns: 1fr;
+  }
+}
+
+.left {
+  padding: t.$spacing-xl t.$section-padding-x;
+  border-right: 0.5px solid t.$border-subtle;
+
+  @include t.lg {
+    border-right: none;
+    border-bottom: 0.5px solid t.$border-subtle;
+    padding: t.$spacing-xl t.$section-padding-x-sm t.$spacing-lg;
+  }
+}
+
+.heading {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 500;
+  line-height: 1.15;
+  color: t.$text-primary;
+  margin-bottom: 1.5rem;
+}
+
+.accent {
+  color: t.$accent;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: t.$accent;
+  color: t.$accent-dark;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 0.75rem 1.75rem;
+  border-radius: t.$border-radius-pill;
+  min-height: 44px;
+  transition: transform 0.15s, opacity 0.15s;
+
+  &:hover {
+    transform: scale(1.04);
+    opacity: 0.9;
+  }
+}
+
+.right {
+  @include t.flex(column, center, stretch, 0);
+  padding: t.$spacing-xl t.$section-padding-x;
+
+  @include t.lg {
+    padding: t.$spacing-lg t.$section-padding-x-sm t.$spacing-xl;
+  }
+}
+
+.item {
+  @include t.flex(column, flex-start, flex-start, 0.25rem);
+  padding: 0.875rem 0;
+  border-bottom: 0.5px solid t.$border-subtle;
+  transition: padding-left 0.2s;
+  cursor: default;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    padding-left: 0.5rem;
+
+    .label {
+      color: t.$accent;
+    }
+
+    .value {
+      color: t.$text-primary;
+    }
+  }
+}
+
+.label {
+  font-size: 0.625rem;
+  color: t.$text-faint;
+  letter-spacing: 0.1em;
+  transition: color 0.2s;
+}
+
+.value {
+  font-size: 0.8125rem;
+  color: t.$text-secondary;
+  transition: color 0.2s;
+}
+
+.valueAccent {
+  color: t.$accent;
+
+  .item:hover & {
+    color: t.$accent;
+  }
+}
