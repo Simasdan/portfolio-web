@@ -10,23 +10,27 @@
   border-bottom: 0.5px solid transparent;
 
   &.scrolled {
-  background: rgba(26, 32, 24, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom-color: t.$border-subtle;
+    background: rgba(26, 32, 24, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom-color: t.$border-subtle;
 
-  .link {
-    color: rgba(246, 243, 239, 0.6);
+    .link {
+      color: rgba(246, 243, 239, 0.6);
 
-    &:hover {
-      color: t.$accent;
+      &:hover {
+        color: t.$accent;
+      }
+    }
+
+    .brand {
+      color: rgba(246, 243, 239, 0.9);
+    }
+
+    .burger span {
+      background: rgba(246, 243, 239, 0.9);
     }
   }
-
-  .brand {
-    color: rgba(246, 243, 239, 0.9);
-  }
-}
 }
 
 .inner {
