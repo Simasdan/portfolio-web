@@ -91,7 +91,7 @@ export const projects: Project[] = [
     num: '08',
     title: 'This Portfolio',
     description:
-      'The portfolio website you are currently viewing. Fully responsive for all screen sizes, built with React and TypeScript. Showcases projects, tech stack, certificates, and contact information with a modern dark design.',
+      'The portfolio website you are currently viewing. Fully responsive for all screen sizes, built with React and TypeScript. Showcases projects, tech stack, certificates, and contact information with a modern light design.',
     techStack: ['React', 'TypeScript', 'SCSS'],
     liveUrl: 'https://simasdan.github.io/portfolio-web/',
     codeUrl: 'https://github.com/Simasdan/portfolio-web-v2',
