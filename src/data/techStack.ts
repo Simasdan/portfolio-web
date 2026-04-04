@@ -16,6 +16,7 @@ export const techStack: TechItem[] = [
   { name: 'HTML', category: 'Markup' },
   { name: 'CSS', category: 'Styling' },
   { name: 'Azure', category: 'Cloud' },
+  { name: 'Docker', category: 'DevOps' },
   { name: 'Git', category: 'Version control' },
   { name: 'GitHub', category: 'Version control' },
 ];
